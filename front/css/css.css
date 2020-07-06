@@ -1,0 +1,59 @@
+@font-face {
+	font-family: InstaFonte;
+	src : url(../fontes/Angelface.otf); 
+}
+.titulo{
+	font-family: Instafonte;
+	font-size: 60px;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+}
+#rodape{
+	position: relativa;
+	bottom: 0;
+	width: 100%;
+	height: 200px;
+	margin-top: 30px ;
+
+}
+
+#contato{
+	position: relative;
+	bottom: 0;
+	padding: 30px 10px 20px 30px
+
+}
+
+#h5Contatos {
+
+	font-size: 16px;
+}
+
+#sociais{
+	position: absolute;
+	bottom: 0;
+	padding: 30px 0px 50px 200px
+}
+#h5Sociais {
+
+	font-size: 16px;
+}
+#ulSociais{
+
+	font-size: 12px;
+}
+
+.margem-topo{
+	margin-top: 30px;
+}
+.foto{
+	border-radius: 50%;
+	border-style: solid;
+	border-color: darkgray;
+
+}
+#principal {
+	background-color: aquamarine;
+
+}

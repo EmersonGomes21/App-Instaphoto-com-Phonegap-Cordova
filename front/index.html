@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>InstaPhoto</title>
+
+    <link rel="stylesheet" href="css/jquery.mobile.min.css">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.min.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+</head>
+
+<body>
+    <div data-role="page" id="principal">
+        <div data-role="header" id="cabecalho">
+            <h1>Instaphoto</h1>
+        </div>
+
+        <div data-role="main" id="conteudo" class="ui-content">
+            <div id="logon">
+                <p class="titulo">Instaphoto</p>
+                <form>
+
+                    <label for="usuario">Usuário:</label>
+                    <input type="email" name="usuario" id="usuario">
+
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" id="senha">
+                </form>
+                <button class="btn btn-outline-primary" type="button" onclick="verificaUsuario()"
+                    id="entrar">Entrar</button>
+
+                <button data-icon="edit" type="button" onclick="cadastro()" id="cadastro" class="margem-topo">Ainda não
+                    tenho cadastro</button>
+
+            </div>
+
+            <div id="user">
+                <div class="ui-grid-a">
+                    <div id="Perfil" class="ui-block-a" style="width: 40%"></div>
+
+                    <div class="ui-block-b" style="width: 60%; text-align: center">
+                        <span id="Nome"></span>
+                        <span id="Outros_autores"></span>
+                        <span id="usuario"></span>
+                        <span id="senha"></span>
+
+                        <button type="button" data-icon="search" id="btnPublica"
+                            style="width: 90% ; margin-left: auto;margin-right: auto; "
+                            onclick="publicacoes()">Publicações</button>
+                        
+                            
+                            <button type="button" data-icon="plus" id="btnPublicacao"
+                                style="width: 90% ; margin-left: auto;margin-right: auto; "
+                                onclick="btPublicacao()">Add Publicação</button>
+
+
+                           <!--     <button type="button" data-icon="minus" id="btnDelPublicacao"
+                                style="width: 90% ; margin-left: auto;margin-right: auto; "
+                                onclick="btDelPublicacao()">Del Publicação</button>      -->
+
+                              
+                                
+
+
+                            
+                                <button type="button" data-icon="power" id="btnSair"
+                            style="width: 90% ; margin-left: auto;margin-right: auto; " onclick="sair()">Sair</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="pub">
+
+            </div>
+
+            <div id="novocadastro">
+                <form>
+                    <label for cad_nome>Nome:</label>
+                    <input id="cad_nome" type="text" maxlength="50">
+
+                    <label for cad_email>Email:</label>
+                    <input id="cad_email" type="email" maxlength="50">
+
+
+                    <label for cad_perfil>Perfil:</label>
+                    <input id="cad_perfil" type="text" maxlength="50">
+
+
+                    <label for cad_outros_autores>Outros autores:</label>
+                    <input id="cad_outros_autores" type="text" maxlength="100">
+
+
+                    <label for cad_senha>Senha:</label>
+                    <input id="cad_senha" type="password" maxlength="15">
+
+                    <button data-icon="check" data-iconpos="top" type="button" onclick="cadastraUsuario()"
+                        id="btnCadastrar" class="margem-topo">Cadastrar</button>
+
+                    <button data-icon="check" data-iconpos="top" type="button" onclick="LoginBt()" id="btnLogin"
+                        class="margem-topo">Voltar</button>
+                </form>
+            </div>
+
+
+            <div id="novapublicacao">
+                <form>
+                    <label for cad_titulo>Titulo:</label>
+                    <input id="cad_titulo" type="text" maxlength="50">
+
+                    <label for cad_local>Local:</label>
+                    <input id="cad_local" type="text" maxlength="50">
+
+                    <label for cad_outros_autores>Editora/Ano:</label>
+                    <input id="cad_editora_ano" type="text" maxlength="100">
+
+                    <button data-icon="check" data-iconpos="top" type="button" onclick="addPublicacao()"
+                        id="btnPublicacao" class="margem-topo">Adicionar</button>
+                </form>
+            </div>
+
+
+
+            <div id="delpublicacao">
+                <form>
+                    <label for cad_Del_Publicacao>Titulo da Publicaçao:</label>
+                    <input id="cad_Del_Publicacao" type="text" maxlength="50">
+
+                    <button data-icon="check" data-iconpos="top" type="button" onclick="delPublicacao()"
+                        id="btnDelPublicacao" class="margem-topo">Deletar</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div data-role="footer" id="rodape" className="text-center">
+
+            <div className="card-group">
+                <div className="card" id="contato">
+                    <div className="card-body">
+                        <div className="contatos">
+                
+                            <ul class="list-unstyled text-small" id="ulSociais" >
+                                <li ><span class="card-text"> CONTATO </span></li>
+                                <li ><span class="text-muted card-text">(91) 98512-5012</span></li>
+                                <li ><span class="text-muted card-text">Tv. Benedito Lisboa, N° 285 </span></li>
+                                <li ><span class="text-muted card-text">Augusto Corrêa / PA </span></li>
+                                <li><span class="text-muted card-text">CNPJ: 00.000.000/0000-00</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="card" id="sociais">
+                    <div className="card-body">
+                        <div class="col-12 col-md">
+                            <ul class="list-unstyled text-small text-center" id="ulSociais">
+                                <li id="tituloSociais"><a 
+                                    >REDES SOCIAIS</a></li>
+                                <li><a class="text-muted card-text" href="https://www.instagram.com/emersongr/"
+                                        target="_blank">Instagram</a></li>
+
+                                <li><a class="text-muted card-text" href="https://www.facebook.com/emersongr7/"
+                                        target="_blank">Facebook</a></li>
+
+                                <li><a class="text-muted card-text"
+                                        href="https://api.whatsapp.com/send?phone=5591985125012"
+                                        target="_blank">Whatsapp</a></li>
+
+                                <li><a class="text-muted card-text" href="https://twitter.com/Emersongr7Gomes"
+                                        target="_blank">Twiter</a></li>
+                                        
+                                <li><a class="text-muted card-text" href="https://github.com/EmersonGomes21"
+                                        target="_blank">GitHub</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    </div>
+    </div>
+    </div>
+
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+
+</body>
+
+</html>

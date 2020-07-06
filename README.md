@@ -1,6 +1,8 @@
 # Aplicativo-Instaphoto-com-cordova-phonegap
  #### Trata-se de um app mobile destinado a publicar informações de editorias de livros (titulo do livro, data, editora, autor, local de publicação), este aplicativo me foi proposto durante a minha graduação.
-
+ 
+## Link para baixar o projeto Phonegap com todas as dependências (plugins etc, basta rodar pelo prompt do node)
+#### https://drive.google.com/file/d/1yjx8IZOsUDJ4lVTTOHeuNrUA9B6YN3_D/view?usp=sharing
 #
 #
 ## Funcionalidades presentes
